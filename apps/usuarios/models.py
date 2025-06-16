@@ -33,6 +33,9 @@ class Rol(models.Model):
     
     def __str__(self):
         return self.get_nombre_display()
+
+    # si un usuario es administrador de una va  a tenr staff y superuser en true
+
     
 
 
@@ -142,7 +145,7 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
 
 
     ## campos para recuperar la contraseña
-    token_recuperacion = models.CharField(max_length=255, null=True, blank=True)
+    token_recuperacion = models.CharField(max_length=255, null=True, blank=True, unique=True)
     token_expiracion = models.DateTimeField(null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -229,6 +232,8 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
         self.token_recuperacion = None
         self.token_expiracion = None
         self.save(update_fields=['token_recuperacion', 'token_expiracion'])
+
+
 
 
 
