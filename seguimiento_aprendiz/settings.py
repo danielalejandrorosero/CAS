@@ -41,7 +41,8 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'eac5-186-144-136-105.ngrok-free.app']
+
 
 
 # Application definition
@@ -81,6 +82,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     'apps.usuarios',
+    'apps.asistencia',
 ]
 
 
@@ -200,8 +202,8 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),  # Token de acceso válido por 1 hora
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),  # Token de refresh válido por 7 días
     'ROTATE_REFRESH_TOKENS': True,  # Genera nuevo refresh token al refrescar
-    'BLACKLIST_AFTER_ROTATION': True,  # Blacklist del token anterior
-    'UPDATE_LAST_LOGIN': True,  # Actualiza last_login del usuario
+    'BLACKLIST_AFTER_ROTATION': True,  # Blacklist del token anterior # para el logout
+    'UPDATE_LAST_LOGIN': True,  # Actualiza last_login del usuario # despues de logout
 
     'ALGORITHM': 'HS256',
     'SIGNING_KEY': SECRET_KEY,
