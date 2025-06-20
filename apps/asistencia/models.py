@@ -332,7 +332,7 @@ class LlamadoAsistencia(models.Model):
             registros.append(RegistroAsistencia(
                 llamado_asistencia=self,
                 aprendiz=aprendiz,
-                estado='PRESENTE'  # Estado por defecto
+                estado='SIN REGISTRAR'  # Estado por defecto actualizado
             ))
 
         RegistroAsistencia.objects.bulk_create(registros)
@@ -525,3 +525,4 @@ class EstadisticaAsistencia(models.Model):
 
     def __str__(self):
         return f"{self.aprendiz.nombres} - {self.resultado_aprendizaje.nombre} - {self.porcentaje_asistencia}%"
+

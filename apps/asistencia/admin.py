@@ -15,5 +15,4 @@ admin.site.register(Matricula)
 admin.site.register(AsignacionInstructor)
 admin.site.register(LlamadoAsistencia)
 admin.site.register(RegistroAsistencia)
-admin.site.register(EstadisticaAsistencia)
 # Register your models here.

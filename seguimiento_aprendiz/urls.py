@@ -38,6 +38,7 @@ urlpatterns = [
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     path('usuarios/', include('apps.usuarios.urls')),
+    path('asistencia/', include('apps.asistencia.urls')),
 
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
 
