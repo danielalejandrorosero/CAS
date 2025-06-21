@@ -331,7 +331,7 @@ class LlamadoAsistencia(models.Model):
         for aprendiz in aprendices:
             registros.append(RegistroAsistencia(
                 llamado_asistencia=self,
-                aprendiz=aprendiz,
+                aprendiz=aprendiz,  
                 estado='SIN REGISTRAR'  # Estado por defecto actualizado
             ))
 
