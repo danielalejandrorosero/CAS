@@ -30,7 +30,7 @@ class UsuarioAdmin(BaseUserAdmin):
     fieldsets = (
         (None, {'fields': ('documento', 'password')}),
         (_('Información personal'), {'fields': ('tipo_documento', 'nombres', 'apellidos', 'email', 'telefono', 'foto_perfil', 'rol')}),
-        (_('Permisos'), {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
+        (_('Permisos'), {'fields': ('is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         (_('Fechas'), {'fields': ('ultimo_acceso', 'fecha_registro', 'last_login')}),
         (_('Recuperación de cuenta'), {'fields': ('token_recuperacion', 'token_expiracion')}),
     )

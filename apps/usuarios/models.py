@@ -161,6 +161,11 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     objects = UsuarioManager()
 
 
+    def get_full_name(self):
+        """Obtiene el nombre completo del usuario"""
+        return f"{self.nombres} {self.apellidos}"
+
+
 
     USERNAME_FIELD = 'documento'
 

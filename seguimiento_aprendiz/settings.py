@@ -78,12 +78,14 @@ JAZZMIN_SETTINGS = {
 THIRD_PARTY_APPS = [
     'rest_framework',
     'drf_spectacular',
+    'django_filters',
 ]
 
 LOCAL_APPS = [
     'apps.usuarios',
     'apps.asistencia',
     'apps.actividades',
+    'apps.comite',
 ]
 
 
@@ -166,7 +168,7 @@ TIME_ZONE = 'America/Bogota'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False # me genera error en la db
 
 
 ## configuraciones para modelos de usuarios
