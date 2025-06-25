@@ -41,7 +41,13 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
 
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'eac5-186-144-136-105.ngrok-free.app']
+
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '192.168.0.18',
+    'c5c6-2800-484-a182-2540-ebd-4f20-63e7-1f3.ngrok-free.app',
+]
 
 
 
@@ -200,7 +206,9 @@ EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = env.bool('EMAIL_USE_TLS')
 
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://c5c6-2800-484-a182-2540-ebd-4f20-63e7-1f3.ngrok-free.app"
+]
 # Configuración JWT
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),  # Token de acceso válido por 1 hora

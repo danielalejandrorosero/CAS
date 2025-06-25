@@ -35,6 +35,8 @@ from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 
 urlpatterns = [
+
+
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     path('usuarios/', include('apps.usuarios.urls')),
