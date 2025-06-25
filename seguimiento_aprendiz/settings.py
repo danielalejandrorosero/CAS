@@ -86,6 +86,7 @@ LOCAL_APPS = [
     'apps.asistencia',
     'apps.actividades',
     'apps.comite',
+    'apps.notificaciones',
 ]
 
 
